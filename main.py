@@ -1,9 +1,15 @@
 from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
 
 
-TOKEN: Final = '6644143306:AAGTHrXLYN09hgck0Yf0Jn4-gBdHUzJ2E_Q'
+TOKEN: Final = {API_KEY}
 BOT_USERNAME: Final = '@PransAmbot'
 
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
